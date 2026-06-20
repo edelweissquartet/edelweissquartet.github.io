@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" 
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url> 
+    <loc>http://www.edelweissquartet.com/</loc> 
+    <image:image>
+       <image:loc>http://www.edelweissquartet.com/_include/img/slider-images/Edelweiss-01.jpg</image:loc>
+       <image:caption>Edelweiss Quartet</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://www.edelweissquartet.com/_include/img/slider-images/Edelweiss-02.jpg</image:loc>
+       <image:caption>Edelweiss Quartet</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://www.edelweissquartet.com/_include/img/slider-images/Edelweiss-03.jpg</image:loc>
+       <image:caption>Edelweiss Quartet</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://www.edelweissquartet.com/_include/img/slider-images/Edelweiss-04.jpg</image:loc>
+       <image:caption>Edelweiss Quartet</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://www.edelweissquartet.com/_include/img/slider-images/Edelweiss-05.jpg</image:loc>
+       <image:caption>Edelweiss Quartet</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://www.edelweissquartet.com/_include/img/slider-images/Edelweiss-06.jpg</image:loc>
+       <image:caption>Edelweiss Quartet</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://www.edelweissquartet.com/_include/img/slider-images/Edelweiss-07.jpg</image:loc>
+       <image:caption>Edelweiss Quartet</image:caption>
+    </image:image>
+	<image:image>
+       <image:loc>http://www.edelweissquartet.com/_include/img/slider-images/Edelweiss-08.jpg</image:loc>
+       <image:caption>Edelweiss Quartet</image:caption>
+    </image:image>
+    <video:video>
+      <video:player_loc>
+        https://www.youtube.com/watch?v=XIyIH1S5oNA
+      </video:player_loc>
+	  <video:thumbnail_loc>
+	    http://www.edelweissquartet.com/_include/img/thumbs/video_thumb.jpg
+	  </video:thumbnail_loc>  
+      <video:title>
+	    Edelweiss Quartet | Ständchen
+	  </video:title>  
+      <video:description>
+        Edelweiss Quartet | Ständchen
+      </video:description>
+    </video:video>
+  </url>
+</urlset>

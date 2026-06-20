@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+
+# Editor
+.vscode/
+.claude/
+
+# Unused source files
+img/logo_edelweiss/Logo_Edelweiss.psd
+img/slider-images/_old/
