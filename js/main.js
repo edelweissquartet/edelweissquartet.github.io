@@ -194,22 +194,30 @@ BRUSHED.fancyBox = function(){
 BRUSHED.contactForm = function(){
 	$("#contact-submit").on('click',function() {
 		$contact_form = $('#contact-form');
-		
+
+		if (!$contact_form[0].reportValidity()) {
+			return false;
+		}
+
 		var fields = $contact_form.serialize();
-		
+
 		$.ajax({
 			type: "POST",
-			url: "./php/contact.php",
+			url: $contact_form.attr('action'),
 			data: fields,
 			dataType: 'json',
+			headers: { 'Accept': 'application/json' },
 			success: function(response) {
-				
-				if(response.status){
-					$('#contact-form input').val('');
-					$('#contact-form textarea').val('');
+				$('#contact-form input').val('');
+				$('#contact-form textarea').val('');
+				$('#response').empty().html('<p class="success">Merci, votre message a bien &eacute;t&eacute; envoy&eacute;&#8239;!</p>');
+			},
+			error: function(xhr) {
+				var message = "Une erreur est survenue, merci de r&eacute;essayer ou de nous &eacute;crire directement.";
+				if (xhr.responseJSON && xhr.responseJSON.errors) {
+					message = xhr.responseJSON.errors.map(function(e){ return e.message; }).join('<br>');
 				}
-				
-				$('#response').empty().html(response.html);
+				$('#response').empty().html('<p class="error">' + message + '</p>');
 			}
 		});
 		return false;
