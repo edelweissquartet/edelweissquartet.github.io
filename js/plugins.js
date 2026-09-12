@@ -187,13 +187,9 @@ self.adjustNav(self, $parent);
 self.unbindInterval();
 
 //Scroll to the correct position
-$.scrollTo(newLoc, self.config.scrollSpeed, {
-axis: 'y',
-easing: self.config.easing,
-offset: {
-top: -self.config.scrollOffset
-},
-onAfter: function() {
+var $target = $(newLoc);
+var scrollPos = $target.length ? $target.offset().top - self.config.scrollOffset : 0;
+$('body, html').animate({scrollTop: scrollPos}, self.config.scrollSpeed, self.config.easing, function() {
 //Do we need to change the hash?
 if(self.config.changeHash) {
 window.location.hash = newLoc;
@@ -205,7 +201,6 @@ self.bindInterval();
 //End callback
 if(self.config.end) {
 self.config.end();
-}
 }
 });
 }
