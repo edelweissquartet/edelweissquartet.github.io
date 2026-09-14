@@ -25,7 +25,7 @@
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Main Style -->
-<link href="./css/main.css" rel="stylesheet">
+<link href="./css/main.css?v=2" rel="stylesheet">
 
 <!-- Supersized -->
 <link href="./css/supersized.css" rel="stylesheet">
@@ -393,10 +393,21 @@
 		</div>
 		<!-- End Title Page -->
 		<!-- Contact -->
-		<div class="row">
-			<div class="span2"></div>
+		<div class="row contact-columns">
+			<div class="span1"></div>
+			<!-- Newsletter signup -->
+			<div class="span5">
+				<h3>NEWSLETTER</h3>
+				<p class="grey">Inscrivez-vous à notre liste de diffusion pour être informés de nos actualités.</p>
+				<div class="eo-embed">
+					<script async src="https://eomail5.com/form/be8d26ba-b048-11f1-94f2-293d4fc96cc6.js" data-form="be8d26ba-b048-11f1-94f2-293d4fc96cc6"></script>
+				</div>
+			</div>
+			<!-- End Newsletter signup -->
 			<!-- Contact form -->
 			<div class="span5">
+				<h3>CONTACT</h3>
+				<p class="grey">Quelque chose à nous dire ? Postez votre message ici.</p>
 				<form id="contact-form" class="contact-form" action="https://formspree.io/f/mnpqykon" method="POST">
 					<p class="contact-name">
 						<input id="contact_name" type="text" placeholder="Votre nom" value="" name="name" required />
@@ -405,28 +416,16 @@
 						<input id="contact_email" type="email" placeholder="Votre adresse email" value="" name="email" required />
 					</p>
 					<p class="contact-message">
-						<textarea id="contact_message" placeholder="Votre message" name="message" rows="15" cols="40" required></textarea>
+						<textarea id="contact_message" placeholder="Votre message" name="message" rows="5" cols="40" required></textarea>
 					</p>
 					<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 					<p class="contact-submit">
 						<a id="contact-submit" class="submit" href="#">Envoyer</a>
 					</p>
-					<div id="response">
-					</div>
+					<div id="response"></div>
 				</form>
 			</div>
 			<!-- End Contact form -->
-			<div class="span3">
-				<div class="contact-details">
-					<h3>MANAGEMENT</h3>
-					<ul>
-						<li>Grégoire Carpentier<br />
-						<a href="https://grgrcrpntr.net">grgrcrpntr.net</a><br />
-						</li>
-					</ul>
-				</div>
-			</div>
-
 		</div>
 		<!-- End Contact -->
 	</div>
