@@ -16,6 +16,13 @@ html, body {
 	height: 100%;
 }
 
+/* ponytail: kills the horizontal drag that exposed the fixed background.
+   html only -- on body it turns body into a scroll container and vertical
+   page scrolling stops working (body has height:100%). */
+html {
+	overflow-x: hidden;
+}
+
 html, hmtl a{
 	width:100%;
 	font-size: 100%; 
@@ -738,7 +745,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .title-page .title {
-	font-size: 48px;
+	font-size: min(48px, 7vw);
 	margin: 0 0 10px 0
 }
 
@@ -749,7 +756,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .title-page-alt .title {
-	font-size: 48px;
+	font-size: min(48px, 7vw);
 	margin: 0 0 10px 0
 }
 
