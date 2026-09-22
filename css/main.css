@@ -1592,3 +1592,56 @@ footer .credits {
        -o-transition: none;
           transition: none;
 }
+/* ponytail: gig tables don't fit 375px -- stack venue over city, drop the
+   departement column, and line the two columns up with the tab labels above
+   (the tab group is centred, so "A VENIR" ends 17px left of centre and
+   "PASSES" starts 19px right of it) */
+@media (max-width: 767px) {
+	#tab_next table,
+	#tab_past table,
+	#tab_next tbody,
+	#tab_past tbody {
+		display: block;
+	}
+
+	#tab_next tr,
+	#tab_past tr {
+		display: grid;
+		grid-template-columns: calc(50% - 17px) calc(50% - 19px);
+		column-gap: 36px;
+	}
+
+	#tab_next td,
+	#tab_past td {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	#tab_next td:nth-child(1),
+	#tab_past td:nth-child(1) {
+		grid-row: span 2;
+		text-align: right;
+		white-space: nowrap;
+	}
+
+	#tab_next td:nth-child(2),
+	#tab_past td:nth-child(2) {
+		grid-column: 2;
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
+
+	#tab_next td:nth-child(3),
+	#tab_past td:nth-child(3) {
+		grid-column: 2;
+		font-size: 15px;
+		line-height: 20px;
+		padding-top: 0;
+		border-top: 0;
+	}
+
+	#tab_next td:nth-child(4),
+	#tab_past td:nth-child(4) {
+		display: none;
+	}
+}
